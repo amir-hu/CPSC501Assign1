@@ -26,30 +26,32 @@ public class Obstacle{
 
   public boolean obstacleInteraction(){
       Player get = new Player();
+      Spike grab = new Spike();
       int playerLength = get.getplayerY();
       int playerHeight = get.getplayerX();
       int playerScore = get.getPlayerScore();
+      int[] spikes = grab.getSpike();
       boolean hit = false;
 
       /**
       * Hit detection for all obstacles
       * Simply checks if the players coordinates are the same as the obstacles coordinates
       */
-      // if(playerHeight >= tri1-40 &&  playerHeight <= tri1+40 && playerLength >=550) {
-      //   hit = true;
-      // }
-      // if(playerHeight >= tri2-40 &&  playerHeight <= tri2+40 && playerLength >=550){
-      //   hit = true;
-      // }
-      // if(playerHeight >= tri3-40 &&  playerHeight <= tri3+40 && playerLength >=550){
-      //   hit = true;
-      // }
-      // if(playerHeight >= tri4-40 &&  playerHeight <= tri4+40 && playerLength >=550){
-      //   hit = true;
-      // }
-      // if(playerHeight >= tri5-40 &&  playerHeight <= tri5+40 && playerLength >=550){
-      //   hit = true;
-      // }
+      if(playerHeight >= spikes[0]-40 &&  playerHeight <= spikes[0]+40 && playerLength >=550) {
+        hit = true;
+      }
+      if(playerHeight >= spikes[1]-40 &&  playerHeight <= spikes[1]+40 && playerLength >=550){
+        hit = true;
+      }
+      if(playerHeight >= spikes[2]-40 &&  playerHeight <= spikes[2]+40 && playerLength >=550){
+        hit = true;
+      }
+      if(playerHeight >= spikes[3]-40 &&  playerHeight <= spikes[3]+40 && playerLength >=550){
+        hit = true;
+      }
+      if(playerHeight >= spikes[4]-40 &&  playerHeight <= spikes[4]+40 && playerLength >=550){
+        hit = true;
+      }
       return hit;
     }
 
