@@ -27,7 +27,6 @@ public class GUI extends JFrame {
 	public static final int WINDOW_HEIGHT = 720;
 	Player player = new Player();
 	World drawWorld = new World();
-	Scores write = new Scores();
 
 
 	/**
@@ -109,7 +108,7 @@ public class GUI extends JFrame {
 	 */
 	Action load = new AbstractAction(){
 		public void actionPerformed(ActionEvent e){
-			write.reading();
+			player.reading();
 			drawWorld.repaint();
 		}
 	};
@@ -131,7 +130,7 @@ public class GUI extends JFrame {
 	 */
 	Action save = new AbstractAction(){
 		public void actionPerformed(ActionEvent e){
-			write.writing();
+			player.writing();
 		}
 	};
 

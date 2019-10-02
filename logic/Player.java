@@ -7,7 +7,16 @@
 package logic;
 import gui.*; //import all the types contained in gui package
 import logic.*; //import all the types contained in logic package
-
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.io.Writer;
+import java.io.PrintWriter;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.util.Scanner;
 /**
 * The class Player is the main class of the logic part of this game.
 * It connects the Obstacle class by calling it.
@@ -18,7 +27,7 @@ import logic.*; //import all the types contained in logic package
 public class Player{
   private static int playerX = 0;
   private static int playerY = 550;
-  protected static int playerScore = 0;
+  private static int playerScore = 0;
 
 
   /**
@@ -100,6 +109,50 @@ public class Player{
     }
   }
 
-  
+  public void writing() {
+    try {
+        File highScores = new File("Scores.txt");
+        FileOutputStream is = new FileOutputStream(highScores);
+        OutputStreamWriter osw = new OutputStreamWriter(is);
+        Writer scores = new BufferedWriter(osw);
+        scores.write("Score: " + playerScore);
+        scores.close();
+    } catch (IOException e) {
+        System.err.println("Problem writing to the file Scores.txt");
+    }
+  }
+
+  public void reading(){
+    String fileName = "Scores.txt";
+    Scanner inputStream = null;
+    String word = null;
+
+    try {
+      inputStream = new Scanner (new File(fileName));
+    }
+    catch (FileNotFoundException e) {
+      System.out.println("Error opening the file " + fileName);
+    }
+
+		while(inputStream.hasNextLine()) {
+      String line = inputStream.nextLine();
+      String[] words = line.split(" ");
+      for (int index = 1; index < words.length; index++) {
+        word = words[index];
+      }
+		}
+
+		inputStream.close();
+
+    try {
+      playerScore = Integer.parseInt(word);
+    }
+    catch(NumberFormatException n){
+      playerScore= 0;
+    }
+
+  }
+
+
 
 }
