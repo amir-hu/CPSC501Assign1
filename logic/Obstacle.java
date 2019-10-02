@@ -37,21 +37,12 @@ public class Obstacle{
       * Hit detection for all obstacles
       * Simply checks if the players coordinates are the same as the obstacles coordinates
       */
-      if(playerHeight >= spikes[0]-40 &&  playerHeight <= spikes[0]+40 && playerLength >=550) {
-        hit = true;
+      for (int i = 0; i < 5; i++ ) {
+        if(playerHeight >= spikes[i]-40 &&  playerHeight <= spikes[i]+40 && playerLength >=550) {
+          hit = true;
+        }
       }
-      if(playerHeight >= spikes[1]-40 &&  playerHeight <= spikes[1]+40 && playerLength >=550){
-        hit = true;
-      }
-      if(playerHeight >= spikes[2]-40 &&  playerHeight <= spikes[2]+40 && playerLength >=550){
-        hit = true;
-      }
-      if(playerHeight >= spikes[3]-40 &&  playerHeight <= spikes[3]+40 && playerLength >=550){
-        hit = true;
-      }
-      if(playerHeight >= spikes[4]-40 &&  playerHeight <= spikes[4]+40 && playerLength >=550){
-        hit = true;
-      }
+
       return hit;
     }
 
