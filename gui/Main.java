@@ -17,7 +17,7 @@ import logic.*; //import all types contained in logic package
  */
 public class Main{
   public static void main(String[] args) {
-    Obstacle begin = new Obstacle();
+    Spike begin = new Spike();
     begin.drawspike();
     GUI start = new GUI();
     start.move();

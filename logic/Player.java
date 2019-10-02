@@ -86,12 +86,13 @@ public class Player{
 
   public void playerStraight(){
     Obstacle isHit = new Obstacle();
+    Spike create = new Spike();
     if(isHit.obstacleInteraction()){
       playerX = 0;
       playerScore = 0;
     }
     if (playerX >= 1350) {
-      isHit.drawspike();
+      create.drawspike();
       playerX = 0;
     }
     else {

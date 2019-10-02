@@ -42,12 +42,9 @@ public class World extends JPanel{
   }
 
   public void paintComponent (Graphics paint) {
-    Obstacle grab = new Obstacle();
-    int tri1 = grab.getTri1();
-    int tri2 = grab.getTri2();
-    int tri3 = grab.getTri3();
-    int tri4 = grab.getTri4();
-    int tri5 = grab.getTri5();
+    Spike grab = new Spike();
+    int[] spikes = grab.getSpike();
+
     //It`s unknown why, but this line prevents the game from lagging.
     GUI fixLag = new GUI();
     Player get = new Player();
@@ -80,11 +77,11 @@ public class World extends JPanel{
     //Sets background color
     this.setBackground(Color.BLACK);
 
-    paint.drawImage(upwardsSpike, tri1, 560, this);
-    paint.drawImage(upwardsSpike, tri2, 560, this);
-    paint.drawImage(upwardsSpike, tri3, 560, this);
-    paint.drawImage(upwardsSpike, tri4, 560, this);
-    paint.drawImage(upwardsSpike, tri5, 560, this);
+    paint.drawImage(upwardsSpike, spikes[0], 560, this);
+    paint.drawImage(upwardsSpike, spikes[1], 560, this);
+    paint.drawImage(upwardsSpike, spikes[2], 560, this);
+    paint.drawImage(upwardsSpike, spikes[3], 560, this);
+    paint.drawImage(upwardsSpike, spikes[4], 560, this);
 
     paint.drawImage(player, playerX, playerY, this);
     paint.setColor(Color.RED);
