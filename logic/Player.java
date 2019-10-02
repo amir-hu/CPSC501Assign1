@@ -85,9 +85,8 @@ public class Player{
   }
 
   public void playerStraight(){
-    Obstacle isHit = new Obstacle();
     Spike create = new Spike();
-    if(isHit.obstacleInteraction()){
+    if(create.obstacleInteraction()){
       playerX = 0;
       playerScore = 0;
     }
@@ -100,5 +99,7 @@ public class Player{
       playerScore ++;
     }
   }
+
+  
 
 }

@@ -25,10 +25,14 @@ public class Spike extends Obstacle{
   public void drawspike(){
     spike = new int[5];
     Random drawspike = new Random();
-    for (int i = 0;i < 5;i++ ) {
+    for (int i = 0;i < 5;i++) {
       int offset = 100 + (300 * i);
       spike[i] = drawspike.nextInt(200) + offset;
     }
+  }
+
+  public boolean hitDetection(){
+    return super.obstacleInteraction();
   }
 
 

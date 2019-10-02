@@ -23,8 +23,7 @@ public class Obstacle{
 
 
 
-
-  public boolean obstacleInteraction(){
+  protected boolean obstacleInteraction(){
       Player get = new Player();
       Spike grab = new Spike();
       int playerLength = get.getplayerY();
