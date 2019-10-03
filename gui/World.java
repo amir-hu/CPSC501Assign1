@@ -41,7 +41,7 @@ public class World extends JPanel{
     }
   }
 
-  public void paintComponent (Graphics paint) {
+  protected void paintComponent (Graphics paint) {
     Spike grab = new Spike();
     int[] spikes = grab.getSpike();
 

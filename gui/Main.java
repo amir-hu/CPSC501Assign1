@@ -5,7 +5,6 @@
  */
 
 package gui;
-import gui.*; //import all types contained in gui package
 import logic.*; //import all types contained in logic package
 
 /**
@@ -17,7 +16,7 @@ import logic.*; //import all types contained in logic package
  */
 public class Main{
   public static void main(String[] args) {
-    Spike begin = new Spike();
+    Spike begin = new Spike(); 
     begin.drawspike();
     GUI start = new GUI();
     start.move();

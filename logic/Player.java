@@ -5,17 +5,13 @@
 
 
 package logic;
-import gui.*; //import all the types contained in gui package
-import logic.*; //import all the types contained in logic package
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.io.Writer;
-import java.io.PrintWriter;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.util.Scanner;
 /**
 * The class Player is the main class of the logic part of this game.
@@ -27,7 +23,7 @@ import java.util.Scanner;
 public class Player{
   private static int playerX = 0;
   private static int playerY = 550;
-  private static int playerScore = 0;
+  private static int playerScore = 0; 
 
 
   /**
@@ -59,7 +55,7 @@ public class Player{
   *sets playerX to xValue
   */
   public void setplayerX(int xValue){
-    this.playerX = xValue;
+    Player.playerX = xValue;
   }
 
   /**
@@ -67,7 +63,7 @@ public class Player{
   *sets playerY to yValue
   */
   public void setplayerY(int yValue){
-    this.playerY = yValue;
+    Player.playerY = yValue;
   }
 
   public void playerJump(){
@@ -102,7 +98,7 @@ public class Player{
     if (playerX >= 1350) {
       create.drawspike();
       playerX = 0;
-    }
+    } 
     else {
       playerX += 5;
       playerScore ++;

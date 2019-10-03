@@ -36,7 +36,7 @@ public class GUI extends JFrame {
 	 * Once the requisetes have been completed the coordinates will move the player accordingly
 	 * Once the coordinates have been reajusted then the jump will be applied in rejump
 	 */
-	public void initialize(){
+	private void initialize(){
 		add(drawWorld);
 		pack();
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -149,7 +149,7 @@ public class GUI extends JFrame {
 	};
 
 
-	public void move() {
+	protected void move() {
 		initialize();
 		InputMap inputMap = drawWorld.getInputMap();
 		ActionMap actionMap = drawWorld.getActionMap();

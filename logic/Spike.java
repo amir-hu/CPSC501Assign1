@@ -4,8 +4,6 @@
  */
 
  package logic;
- import gui.*; //import all the types contained in gui package
- import logic.*; //import all the types contained in logic package
  import java.util.Random;
 
 
@@ -24,7 +22,7 @@ public class Spike extends Obstacle{
 
   public void drawspike(){
     spike = new int[5];
-    Random drawspike = new Random();
+    Random drawspike = new Random(); 
     for (int i = 0;i < 5;i++) {
       int offset = 100 + (300 * i);
       spike[i] = drawspike.nextInt(200) + offset;
