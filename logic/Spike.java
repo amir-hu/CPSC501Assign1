@@ -31,7 +31,7 @@ public class Spike extends Obstacle{
   }
 
   protected boolean hitDetection(){
-    return super.obstacleInteraction(Spike_Size);
+    return super.obstacleInteraction(Spike_Size,spike);
   }
 
 
