@@ -32,6 +32,9 @@ public class World extends JPanel{
    * @exception IOEXception catches an exception if there is error displaying
    * the image of the objects in the game
    */
+
+
+
   public World() {
     try {
       upwardsSpike = ImageIO.read(new File("Spike.png"));
@@ -50,7 +53,7 @@ public class World extends JPanel{
     Player get = new Player();
     int playerX = get.getplayerX();
     int playerY = get.getplayerY();
-    int score = get.getPlayerScore();
+    int score = get.getPlayerScore(); 
     //Paint instructions for the shortcut keys on the screen.
     super.paintComponent(paint);
     paint.setColor(Color.WHITE);
