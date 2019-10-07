@@ -10,6 +10,7 @@
 public class Spike extends Obstacle{
 
   private static int[] spike;
+  private static int Spike_Size = 40;
 
 
   public int[] getSpike(){
@@ -30,7 +31,7 @@ public class Spike extends Obstacle{
   }
 
   protected boolean hitDetection(){
-    return super.obstacleInteraction();
+    return super.obstacleInteraction(Spike_Size);
   }
 
 

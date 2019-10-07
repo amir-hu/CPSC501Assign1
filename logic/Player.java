@@ -91,7 +91,7 @@ public class Player{
 
   public void playerStraight(){
     Spike create = new Spike();
-    if(create.obstacleInteraction()){
+    if(create.hitDetection()){
       playerX = 0;
       playerScore = 0;
     }

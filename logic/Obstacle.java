@@ -20,7 +20,7 @@ public class Obstacle{
 
 
 
-  protected boolean obstacleInteraction(){
+  protected boolean obstacleInteraction(int offset){
       Player get = new Player();
       Spike grab = new Spike();
       int playerLength = get.getplayerY();
@@ -33,7 +33,7 @@ public class Obstacle{
       * Simply checks if the players coordinates are the same as the obstacles coordinates
       */ 
       for (int i = 0; i < 5; i++ ) {
-        if(playerHeight >= spikes[i]-40 &&  playerHeight <= spikes[i]+40 && playerLength >=550) {
+        if(playerHeight >= spikes[i]-offset &&  playerHeight <= spikes[i]+offset && playerLength >=550) {
           hit = true;
           break;
         }
